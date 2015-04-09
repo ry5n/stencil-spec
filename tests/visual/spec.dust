@@ -3,7 +3,7 @@
     /* Test-specific fixture styles go here. */
 </style>
 
-{@c-spec for="Spec" repo="http://github.com/mobify/stencil-spec"}
+{@c-spec for="Spec" repository="https://github.com/ry5n/stencil-spec"}
     {@c-spec__test describe=".c-spec__test"}
         {@c-spec__case expect="Should describe a feature that can be verified visually."}
             Example
