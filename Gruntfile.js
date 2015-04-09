@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    var path = require('path');
     require('load-grunt-tasks')(grunt);
 
     // Project configuration.
@@ -8,6 +9,7 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 style: 'expanded',
+                sourcemap: 'none',
                 loadPath: [
                     './',
                     './bower_components',
@@ -16,8 +18,9 @@ module.exports = function(grunt) {
             compile_tests: {
                 files: [{
                     expand: true,
-                    src: 'tests/**/*.scss',
-                    dest: '.',
+                    flatten: true,
+                    src: 'src/**/*.scss',
+                    dest: 'tmp',
                     ext: '.css'
                 }]
             }
@@ -34,10 +37,12 @@ module.exports = function(grunt) {
             prefix_tests: {
                 files: [{
                     expand: true,
-                    src: 'tests/**/*.css' // Overwrite compiled css.
+                    src: 'tmp/*.css' // Overwrite compiled css.
                 }]
             },
         },
+
+        clean: ['tmp', '**/*.css'],
 
         watch: {
             scss: {
@@ -54,13 +59,15 @@ module.exports = function(grunt) {
                 options: {
                     hostname: '0.0.0.0',
                     port: 3000,
-                    base: 'tests/visual',
+                    useAvailablePort: true,
+                    base: '.'
                 }
             }
         }
     });
 
     // Default task
-    grunt.registerTask('default', ['sass', 'autoprefixer']);
-    grunt.registerTask('serve', ['default', 'connect:server', 'watch']);
+    grunt.registerTask('compile', ['sass', 'autoprefixer']);
+    grunt.registerTask('serve', ['compile', 'connect:server', 'watch']);
+    grunt.registerTask('default', ['serve']);
 };
