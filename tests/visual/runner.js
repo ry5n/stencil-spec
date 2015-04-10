@@ -3,9 +3,9 @@ require.config({
         'dust-full': ['dust.core', 'dust.compile'],
     },
     paths: {
-        'text': '../../node_modules/requirejs-text/text',
-        'dust-full': '../../node_modules/dustjs-linkedin/dist/dust-full',
-        'component-dustjs-utils': '../../node_modules/component-dustjs-utils',
+        'text': '../../bower_components/text/text',
+        'dust-full': '../../bower_components/dustjs-linkedin/dist/dust-full',
+        'component-dustjs-utils': '../../bower_components/component-dustjs-utils',
     },
 });
 
