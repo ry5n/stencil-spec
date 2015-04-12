@@ -7,7 +7,9 @@ define(function(require) {
     require('../../spec.component');
 
     // Define any context required for the tests:
-    var context = {};
+    var context = {
+        repo: 'https://github.com/ry5n/stencil-spec'
+    };
 
     // Render
     dust.renderSource(spec, context, function(err, out) {
