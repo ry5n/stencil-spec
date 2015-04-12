@@ -12,13 +12,16 @@ module.exports = function(grunt) {
                 loadPath: [
                     './',
                     './bower_components',
+                ],
+                require: [
+                    'compass/import-once/activate'
                 ]
             },
             compile_tests: {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: 'src/**/*.scss',
+                    src: 'tests/visual/*.scss',
                     dest: 'tmp',
                     ext: '.css'
                 }]
@@ -46,8 +49,8 @@ module.exports = function(grunt) {
         watch: {
             scss: {
                 files: [
-                    'src/**/*.scss',
-                    'tests/**/*.scss'
+                    '**/*.scss',
+                    'tests/visual/*.scss'
                 ],
                 tasks: ['default']
             }
@@ -65,7 +68,7 @@ module.exports = function(grunt) {
         }
     });
 
-    // Default task
+    // Tasks
     grunt.registerTask('compile', ['sass', 'autoprefixer']);
     grunt.registerTask('serve', ['compile', 'connect:server', 'watch']);
     grunt.registerTask('default', ['serve']);
