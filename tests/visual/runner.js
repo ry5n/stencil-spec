@@ -1,7 +1,7 @@
 define(function(require) {
     var dust = require('dustjs-component');
     var text = require('text');
-    var spec = require('text!spec.dust');
+    var tests = require('text!tests.dust');
 
     // Require the component’s template loader (`*.component.js`):
     require('../../spec.component');
@@ -12,7 +12,7 @@ define(function(require) {
     };
 
     // Render
-    dust.renderSource(spec, context, function(err, out) {
+    dust.renderSource(tests, context, function(err, out) {
         if (!err) {
             document.querySelector('body').innerHTML = out;
         } else {
