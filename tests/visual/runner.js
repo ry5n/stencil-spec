@@ -4,7 +4,7 @@ define(function(require) {
     var spec = require('text!spec.dust');
 
     // Require the component’s template loader (`*.component.js`) here.
-    require('src/spec.component');
+    require('../../spec.component');
 
     // Define any context required for the tests.
     var context = {};

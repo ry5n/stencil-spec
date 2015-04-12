@@ -16,10 +16,9 @@
   ],
   "license": "MIT",
   "main": [
-    "src/_style.scss",
-    "src/template.dust",
-    "src/schema.js",
-    "src/ui.js"
+    "spec.component.js",
+    "spec.schema.js",
+    "spec.scss"
   ],
   "ignore": [
     ".editorconfig",

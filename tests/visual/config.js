@@ -9,7 +9,6 @@ require.config({
         'text': '../../bower_components/text/text',
         'dust-full': '../../bower_components/dustjs-linkedin/dist/dust-full',
         'dustjs-component': '../../bower_components/dustjs-component',
-        'src': '../../',
     },
 });
 
