@@ -26,6 +26,8 @@
     ".gitignore",
     "package.json",
     "Gruntfile.js",
+    "Gemfile",
+    "Gemfile.lock",
     "tests"
   ],
   "dependencies": {
