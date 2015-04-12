@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "main": [
-    "spec.component.js",
+    "spec.template.js",
     "spec.schema.js",
     "spec.scss"
   ],

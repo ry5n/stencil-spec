@@ -3,8 +3,8 @@ define(function(require) {
     var text = require('text');
     var tests = require('text!tests.dust');
 
-    // Require the component’s template loader (`*.component.js`):
-    require('../../spec.component');
+    // Load and compile this component’s dust templates:
+    require('../../spec.template');
 
     // Define any context required for the tests:
     var context = {
