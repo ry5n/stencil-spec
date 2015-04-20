@@ -1,0 +1,21 @@
+<style>
+    /* Test-specific fixture styles go here. */
+</style>
+
+{@c-spec for="Spec" repository=repo}
+    {@c-spec__test describe=".c-spec__test"}
+        {@c-spec__case expect="Should describe a feature that can be verified visually."}
+            Example
+        {/c-spec__case}
+
+        {@c-spec__case expect="Should visually separate adjacent test cases."}
+            Example
+        {/c-spec__case}
+    {/c-spec__test}
+
+    {@c-spec__test describe=".c-spec__box"}
+        {@c-spec__case expect="Should render a box at tap-target size."}
+            <div class="c-spec__box"></div>
+        {/c-spec__case}
+    {/c-spec__test}
+{/c-spec}

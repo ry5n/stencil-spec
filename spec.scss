@@ -1,0 +1,133 @@
+// Stencil Spec
+// ===
+//
+// Visual test container for other components
+
+
+// Deps
+// ---
+
+@import 'stencil-variables/src/style';
+@import 'level/level';
+
+
+// Configurable variables
+// ---
+
+$spec__border-radius: 4px !default;
+
+
+// Test page frame
+// ---
+//
+// 1. Better match mobile text rendering in desktop test environments.
+
+.c-spec {
+    box-sizing: border-box;
+    max-width: 40rem;
+    margin: auto;
+    padding-right: 4%;
+    padding-left: 4%;
+
+    color: hsla(0, 0%, 0%, 0.85);
+    font-family: "Helvetica Neue", Helvetica, Roboto, sans-serif;;
+    font-size: $font-size;
+    line-height: 1.25;
+
+    -webkit-font-smoothing: antialiased; // 1
+}
+
+
+// Test page title
+// ---
+
+.c-spec__title {
+    margin: ($unit * 2) 0 ($unit * 3);
+
+    font-size: 28px;
+    line-height: 1.25em;
+
+    > a {
+        color: $link-color;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Test instance
+// ---
+//
+// 1. Ensure borders aren’t covered by the Test run background.
+
+.c-spec__test {
+    border: $border;
+
+    border-radius: $spec__border-radius;
+
+    overflow: hidden; // 1
+}
+
+.c-spec__test + .c-spec__test {
+    margin-top: $unit * 2;
+}
+
+
+// Name of the feature under test
+// ---
+
+.c-spec__describe {
+    margin: 0;
+    padding: $unit;
+
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+
+// Detailed expectation of how the feature should render
+// ---
+
+.c-spec__expect {
+    margin: 0;
+    padding: $unit * 1.5;
+    border-top: $border;
+
+    font-weight: bold;
+}
+
+
+// Contains the markup for the component under test.
+// ---
+
+.c-spec__run {
+    margin: 0;
+    padding: $unit * 1.5;
+
+    background: $neutral-30;
+
+    color: $neutral-60;
+}
+
+
+// Block used as a fixture for representing a content element.
+// ---
+//
+// Use inline styles in the test html to set custom sizes.
+
+.c-spec__box {
+    box-sizing: border-box;
+    width: $tap-size;
+    height: $tap-size;
+    padding: 0.5rem;
+    border: 1px solid hsl(200, 20%, 70%);
+
+    background: hsl(200, 20%, 80%);
+
+    color: hsla(0, 0%, 0%, 0.65);
+    font-size: 0.8rem;
+}

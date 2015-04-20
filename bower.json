@@ -1,13 +1,13 @@
 {
-  "name": "stencil-test",
+  "name": "stencil-spec",
   "version": "0.0.0",
-  "description": "Testing the Stencil generator",
+  "description": "Visual test container for other components",
   "authors": [
     "Mobify"
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/mobify/stencil-test.git"
+    "url": "https://github.com/ry5n/stencil-spec"
   },
   "keywords": [
     "mobify",
@@ -16,18 +16,27 @@
   ],
   "license": "MIT",
   "main": [
-    "src/_style.scss",
-    "src/template.dust",
-    "src/schema.js",
-    "src/ui.js"
+    "spec.template.js",
+    "spec.schema.js",
+    "spec.scss"
   ],
   "ignore": [
     ".editorconfig",
     ".gitignore",
     "package.json",
     "Gruntfile.js",
+    "Gemfile",
+    "Gemfile.lock",
     "tests"
   ],
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "stencil-variables": "ry5n/stencil-variables",
+    "level": "mobify/level#~0.0.1"
+  },
+  "devDependencies": {
+    "dustjs-linkedin": "~2.6.0",
+    "dustjs-component": "mobify/dustjs-helper-component#compile-component",
+    "requirejs": "^2.1.0",
+    "text": "^2.0.0"
+  }
 }

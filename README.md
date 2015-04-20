@@ -1,7 +1,7 @@
 
-# Stencil Test
+# Stencil Spec
 
-Description goes here. This should be a couple of sentences that sum up the one thing the component is/does.
+Visual test container for other components. Inspired by BDD-style testing frameworks like Rspec and Mocha.
 
 [Link to demo](#)
 
@@ -9,7 +9,8 @@ Description goes here. This should be a couple of sentences that sum up the one 
 
 - Sass
 - AMD loader
-- Dust templating
+- Dust.js
+- Mobify component extensions for Dust.js
 
 ## Installation
 
@@ -22,5 +23,8 @@ Installation instructions. Be as brief as possible without leaving out necessary
 ## Development
 
 - preview
-- 
+
+## Attribution
+
+ - https://github.com/suitcss/components-test/
 
