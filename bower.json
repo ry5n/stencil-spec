@@ -31,11 +31,10 @@
   ],
   "dependencies": {
     "stencil-variables": "ry5n/stencil-variables",
-    "level": "mobify/level#~0.0.1"
+    "level": "mobify/level#~0.0.1",
+    "dustjs-component": "mobify/dustjs-helper-component#adaptive-compat"
   },
   "devDependencies": {
-    "dustjs-linkedin": "~2.6.0",
-    "dustjs-component": "mobify/dustjs-helper-component#compile-component",
     "requirejs": "^2.1.0",
     "text": "^2.0.0"
   }
